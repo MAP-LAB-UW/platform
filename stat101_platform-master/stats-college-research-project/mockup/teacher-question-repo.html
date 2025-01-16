@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create, Edit, and Publish Tests</title>
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom Styles -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+      crossorigin="anonymous"></script>
+    <!-- Custom js -->
+    <script src="js/new-test.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <header>
+      <div class="jumbotron jumbotron-fluid bg-light">
+        <div class="container text-center">
+          <h1>Make and View Questions</h1>
+        </div>
+      </div>
+    </header>
+    <main>
+        <nav class="d-flex flex-column">
+            <a href="teacher-home.html" class="text-center mt-4">
+            <img src="imgs/home.png" alt="home"/>
+            <p class="text-dark">Home</p>
+            </a>
+            <a href="teacher-tests.html" class="text-center">
+            <img class="navLink" src="imgs/test.png" alt="create, edit, and publish tests"/>
+            <p class="text-white">Create/Edit Tests</p>
+            </a>
+            <a href="teacher-monitor.html" class="text-center">
+            <img class="navLink" src="imgs/monitor.png" alt="create, edit, and publish tests"/>
+            <p class="text-dark">Monitor Test Progress</p>
+            </a>
+        </nav>
+        <div class="container">
+            <div class="d-flex flex-row">
+                <h2>Recent Questions</h2>
+                <!-- Search form -->
+                <div class="form-inline ml-auto flex-item">
+                    <input class="form-control" type="text" placeholder="Search By Topic" aria-label="Search">
+                    <button class="btn ml-2 btn-primary">Search</button>
+                </div>
+            </div>
+            <button class="mt-3 mb-3 btn btn-lg btn-primary"> 
+                New Question
+            </button>
+            <div id="question-list" class="card-deck d-flex mt-3 flex-row flex-wrap">
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <h5 class="mb-2">Topic</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">4/30/2018</h6>
+                        <p class="card-text">The body of the question goes here and will be cut off if it's too long</p>
+                    </div>
+                    <button class="btn btn-primary">Edit</button>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <h5 class="mb-2">Topic</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">4/30/2018</h6>
+                        <p class="card-text">The body of the question goes here and will be cut off if it's too long</p>
+                    </div>
+                    <button class="btn btn-primary">Edit</button>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <h5 class="mb-2">Topic</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">4/30/2018</h6>
+                        <p class="card-text">The body of the question goes here and will be cut off if it's too long</p>
+                    </div>
+                    <button class="btn btn-primary">Edit</button>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <h5 class="mb-2">Topic</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">4/30/2018</h6>
+                        <p class="card-text">The body of the question goes here and will be cut off if it's too long</p>
+                    </div>
+                    <button class="btn btn-primary">Edit</button>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <h5 class="mb-2">Topic</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">4/30/2018</h6>
+                        <p class="card-text">The body of the question goes here and will be cut off if it's too long</p>
+                    </div>
+                    <button class="btn btn-primary">Edit</button>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <h5 class="mb-2">Topic</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">4/30/2018</h6>
+                        <p class="card-text">The body of the question goes here and will be cut off if it's too long</p>
+                    </div>
+                    <button class="btn btn-primary">Edit</button>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <h5 class="mb-2">Topic</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">4/30/2018</h6>
+                        <p class="card-text">The body of the question goes here and will be cut off if it's too long</p>
+                    </div>
+                    <button class="btn btn-primary">Edit</button>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <h5 class="mb-2">Topic</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">4/30/2018</h6>
+                        <p class="card-text">The body of the question goes here and will be cut off if it's too long</p>
+                    </div>
+                    <button class="btn btn-primary">Edit</button>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <h5 class="mb-2">Topic</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">4/30/2018</h6>
+                        <p class="card-text">The body of the question goes here and will be cut off if it's too long</p>
+                    </div>
+                    <button class="btn btn-primary">Edit</button>
+                </div>    
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>

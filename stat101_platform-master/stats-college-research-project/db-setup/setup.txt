@@ -1,0 +1,91 @@
+# stat101 is the database name
+# change as necessary
+CREATE DATABASE stat101;
+USE stat101;
+
+# create all the tables
+CREATE TABLE test_bank(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    teacher_id INT UNSIGNED NOT NULL,
+    topic VARCHAR(60) NOT NULL,
+    status ENUM('draft', 'published') NOT NULL,
+    last_updated_time TIMESTAMP NOT NULL);
+
+CREATE TABLE item_tag(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    tag_name VARCHAR(60) NOT NULL);
+
+CREATE TABLE item_bank(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    question_entity_id INT UNSIGNED NOT NULL,
+    correct_answers CHAR(1) NOT NULL
+);
+
+CREATE TABLE tag_item_rel(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    item_id INT UNSIGNED NOT NULL,
+    tag_id INT UNSIGNED NOT NULL
+);
+
+CREATE TABLE test_item_rel(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    item_id INT UNSIGNED NOT NULL,
+    test_id INT UNSIGNED NOT NULL
+);
+
+CREATE TABLE question_entity(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    question VARCHAR(500) NOT NULL
+);
+
+CREATE TABLE option_entity(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    item_id INT UNSIGNED NOT NULL,
+    choice VARCHAR(250) NOT NULL,
+    choice_label CHAR(1) NOT NULL
+);
+
+CREATE TABLE item_instance(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    question_number INT UNSIGNED NOT NULL,
+    item_id INT UNSIGNED NOT NULL,
+    test_instance_id INT UNSIGNED NOT NULL,
+    start_time TIMESTAMP NOT NULL,
+    end_time TIMESTAMP NOT NULL,
+    answer CHAR(1) NOT NULL
+);
+
+CREATE TABLE test_instance(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    student_id INT UNSIGNED NOT NULL,
+    test_id INT UNSIGNED NOT NULL,
+    status ENUM('in_progress', 'finished') NOT NULL,
+    start_time TIMESTAMP,
+    end_time TIMESTAMP,
+    score INT UNSIGNED
+);
+
+# link keys
+ALTER TABLE tag_item_rel 
+ADD FOREIGN KEY (tag_id) REFERENCES item_tag(id);
+
+ALTER TABLE tag_item_rel
+ADD FOREIGN KEY (item_id) REFERENCES item_bank(id);
+
+ALTER TABLE test_item_rel
+ADD FOREIGN KEY (test_id) REFERENCES test_bank(id);
+
+ALTER TABLE test_instance
+ADD FOREIGN KEY (test_id) REFERENCES test_bank(id);
+
+ALTER TABLE item_bank
+ADD FOREIGN KEY (question_entity_id) REFERENCES question_entity(id);
+
+ALTER TABLE option_entity
+ADD FOREIGN KEY (item_id) REFERENCES item_bank(id);
+
+ALTER TABLE item_instance
+ADD FOREIGN KEY (item_id) REFERENCES item_bank(id);
+
+ALTER TABLE item_instance
+ADD FOREIGN KEY (test_instance_id) REFERENCES test_instance(id);

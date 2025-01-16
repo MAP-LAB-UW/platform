@@ -1,0 +1,151 @@
+body {
+  font-family: 'Encode Sans', sans-serif;
+}
+
+h3 {
+  font-size: 16pt;
+}
+
+/* card styles for home and test home page */
+#teacher-home .card-deck {
+  max-width: 40rem;
+}
+
+.card-deck img {
+  width: 100px;
+}
+
+.card {
+  max-width: 20rem;
+}
+
+.card:hover {
+  background-color: #eaeaea;
+}
+
+.card-body h4,p {
+  color: black;
+}
+
+.card a:hover {
+  text-decoration: none;
+}
+/* end card styles */
+
+/* card styles for Test View page */
+#testViewCardDeck .card {
+  max-width: 15rem;
+}
+/* end Test View page styles */
+
+/* styles for student test page */
+
+#studentTest .card {
+  min-width: 40rem;
+}
+
+#studentTest .card:hover {
+  background-color: #ffffff;
+}
+
+#studentTest .card-deck {
+  flex-flow: column;
+}
+
+#studentTest nav {
+  position: relative;
+  float: none;
+  width: 27rem;
+  background-color: #ffffff; 
+}
+
+#studentTest nav .navBubble {
+  width: 10px;
+  height: 10px;
+  outline-color: black;
+}
+
+.navBubble:hover {
+  cursor: pointer;
+}
+
+.triangle-left {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-right: 20px solid #555;
+	border-bottom: 10px solid transparent;
+}
+
+.triangle-left:hover {
+  cursor: pointer;
+}
+
+.triangle-right {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-left: 20px solid #555;
+	border-bottom: 10px solid transparent;
+}
+
+.triangle-right:hover {
+  cursor: pointer;
+}
+
+/* end student test page styles */
+
+/* navbar styles */
+nav {
+  position: fixed;
+  float: left;
+  width: 6rem;
+  background-color: #4286f4;
+}
+
+.navLink {
+  width: 50px;
+  height: 50px;
+}
+
+nav a:hover {
+  background-color: #ededed;
+  text-decoration: none;
+}
+
+nav p {
+  font-size: 11pt;
+}
+/* navbar styles end */
+
+/* create test page styles */
+form .card {
+  min-width: 50rem;
+}
+
+form .card:hover {
+  background-color: white;
+}
+
+form input {
+  border: none;
+  font-size: 14pt;
+}
+
+#test-name, form label {
+  font-size: 16pt;
+}
+/* create test page styles end */
+
+/* Question repo styles */
+#question-list .card {
+  min-width: 15rem;
+}
+
+
+@media (min-width: 576px) {
+
+  .jumbotron {
+    padding: 2rem 1rem;
+  }
+}

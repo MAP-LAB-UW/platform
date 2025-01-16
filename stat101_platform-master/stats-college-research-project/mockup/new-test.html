@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create, Edit, and Publish Tests</title>
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom Styles -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+      crossorigin="anonymous"></script>
+    <!-- Custom js -->
+    <script src="js/new-test.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <header>
+      <div class="jumbotron jumbotron-fluid bg-light">
+        <div class="container text-center">
+          <h1>Create, Edit, and Publish Tests</h1>
+        </div>
+      </div>
+    </header>
+    <main>
+      <nav class="d-flex flex-column">
+        <a href="teacher-home.html" class="text-center mt-4">
+          <img src="imgs/home.png" alt="home"/>
+          <p class="text-dark">Home</p>
+        </a>
+        <a href="teacher-tests.html" class="text-center">
+          <img class="navLink" src="imgs/test.png" alt="create, edit, and publish tests"/>
+          <p class="text-white">Create/Edit Tests</p>
+        </a>
+        <a href="teacher-monitor.html" class="text-center">
+          <img class="navLink" src="imgs/monitor.png" alt="create, edit, and publish tests"/>
+          <p class="text-dark">Monitor Test Progress</p>
+        </a>
+      </nav>
+      <div class="container">
+        <form class="mb-5 ml-5 pl-5">
+          <div class="form-group">
+            <label for="test-name">Test Name</label>
+            <input id="test-name" class="form-control" placeholder="Ex: The Normal Curve">
+          </div>
+          <div class="form-group">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">1.</h3>
+                <input class="question-title" placeholder="Question Title (optional)"/>
+                <textarea class="mt-2" name="question text" rows="5" cols="80">Enter question text here.</textarea>
+                <ol type="a" class="list-group d-flex flex-column">
+                  <li class="list-item"><input class="ml-1 mt-3" placeholder="Answer Choice 1"/></li>
+                  <li class="list-item"><input class="ml-1 mt-1" placeholder="Answer Choice 2"/></li>
+                </ol>
+                <button class="addOption btn btn-primary btn-sm mt-3">Add Option</button>
+                <h6 class="mt-3">Correct Answer:</h6>
+                <select class="correct-ans">
+                  <option value="a">a</option>
+                  <option value="b">b</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <button id="addQuestion" class="btn btn-primary btn-lg">Add Question</button>
+          <button id="saveTestBtn" type="submit" class="btn btn-primary btn-lg">Save Test</button>
+        </form>
+        <div id="successMsg" class="text-center d-none">
+          <p>Your test was saved successfully! To publish your test, go to the
+          <a href="teacher-view.html">View Tests</a> page</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>
